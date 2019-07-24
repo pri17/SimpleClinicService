@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="4b393eed-a925-47b5-b270-9b00c50d55d8" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:52719/UrgentService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="UrgentService.disco" MetadataType="Disco" ID="b20ce043-3ff4-4217-bd39-af79599edc83" SourceId="1" SourceUrl="http://localhost:52719/UrgentService.svc?disco" />
+    <MetadataFile FileName="UrgentService.wsdl" MetadataType="Wsdl" ID="063c3af4-4cbc-408b-a7ac-06f207eecd85" SourceId="1" SourceUrl="http://localhost:52719/UrgentService.svc?wsdl" />
+    <MetadataFile FileName="UrgentService.xsd" MetadataType="Schema" ID="42008ce2-8e8a-4191-9b85-1bd28e607be5" SourceId="1" SourceUrl="http://localhost:52719/UrgentService.svc?xsd=xsd0" />
+    <MetadataFile FileName="UrgentService1.xsd" MetadataType="Schema" ID="b589e69d-74d9-4b59-83d8-cb6a14645b1c" SourceId="1" SourceUrl="http://localhost:52719/UrgentService.svc?xsd=xsd1" />
+    <MetadataFile FileName="UrgentService2.xsd" MetadataType="Schema" ID="198524a6-ae2f-4c77-8907-1374b7b2ce28" SourceId="1" SourceUrl="http://localhost:52719/UrgentService.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

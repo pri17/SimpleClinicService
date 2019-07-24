@@ -1,0 +1,653 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="AppointmentService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:52719/AppointmentService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:52719/AppointmentService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/SampleDataContracts" />
+      <xsd:import schemaLocation="http://localhost:52719/AppointmentService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IAppointmentService_getAppointmentData_InputMessage">
+    <wsdl:part name="parameters" element="tns:getAppointmentData" />
+  </wsdl:message>
+  <wsdl:message name="IAppointmentService_getAppointmentData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getAppointmentDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAppointmentService_getAppointmentData_DatabaseExceptionContractFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/SampleDataContracts" name="detail" element="q1:DatabaseExceptionContract" />
+  </wsdl:message>
+  <wsdl:message name="IAppointmentService_InsertAppointment_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertAppointment" />
+  </wsdl:message>
+  <wsdl:message name="IAppointmentService_InsertAppointment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertAppointmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAppointmentService_InsertAppointment_DatabaseExceptionContractFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/SampleDataContracts" name="detail" element="q2:DatabaseExceptionContract" />
+  </wsdl:message>
+  <wsdl:message name="IAppointmentService_UpdateAppointment_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateAppointment" />
+  </wsdl:message>
+  <wsdl:message name="IAppointmentService_UpdateAppointment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateAppointmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAppointmentService_UpdateAppointment_DatabaseExceptionContractFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/SampleDataContracts" name="detail" element="q3:DatabaseExceptionContract" />
+  </wsdl:message>
+  <wsdl:message name="IAppointmentService_CancelAppointment_InputMessage">
+    <wsdl:part name="parameters" element="tns:CancelAppointment" />
+  </wsdl:message>
+  <wsdl:message name="IAppointmentService_CancelAppointment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CancelAppointmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAppointmentService_CancelAppointment_DatabaseExceptionContractFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://schemas.datacontract.org/2004/07/SampleDataContracts" name="detail" element="q4:DatabaseExceptionContract" />
+  </wsdl:message>
+  <wsdl:message name="IAppointmentService_UndoCancelAppointment_InputMessage">
+    <wsdl:part name="parameters" element="tns:UndoCancelAppointment" />
+  </wsdl:message>
+  <wsdl:message name="IAppointmentService_UndoCancelAppointment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UndoCancelAppointmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAppointmentService_UndoCancelAppointment_DatabaseExceptionContractFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://schemas.datacontract.org/2004/07/SampleDataContracts" name="detail" element="q5:DatabaseExceptionContract" />
+  </wsdl:message>
+  <wsdl:message name="IAppointmentService_getAllList_InputMessage">
+    <wsdl:part name="parameters" element="tns:getAllList" />
+  </wsdl:message>
+  <wsdl:message name="IAppointmentService_getAllList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getAllListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAppointmentService_getAllList_DatabaseExceptionContractFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://schemas.datacontract.org/2004/07/SampleDataContracts" name="detail" element="q6:DatabaseExceptionContract" />
+  </wsdl:message>
+  <wsdl:message name="IAppointmentService_getListWithClinicSpecialty_InputMessage">
+    <wsdl:part name="parameters" element="tns:getListWithClinicSpecialty" />
+  </wsdl:message>
+  <wsdl:message name="IAppointmentService_getListWithClinicSpecialty_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getListWithClinicSpecialtyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAppointmentService_getListWithClinicSpecialty_DatabaseExceptionContractFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://schemas.datacontract.org/2004/07/SampleDataContracts" name="detail" element="q7:DatabaseExceptionContract" />
+  </wsdl:message>
+  <wsdl:message name="IAppointmentService_getFreePeriodsNew_InputMessage">
+    <wsdl:part name="parameters" element="tns:getFreePeriodsNew" />
+  </wsdl:message>
+  <wsdl:message name="IAppointmentService_getFreePeriodsNew_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getFreePeriodsNewResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAppointmentService_getFreePeriodsNew_DatabaseExceptionContractFault_FaultMessage">
+    <wsdl:part xmlns:q8="http://schemas.datacontract.org/2004/07/SampleDataContracts" name="detail" element="q8:DatabaseExceptionContract" />
+  </wsdl:message>
+  <wsdl:message name="IAppointmentService_getFreePeriodsEdit_InputMessage">
+    <wsdl:part name="parameters" element="tns:getFreePeriodsEdit" />
+  </wsdl:message>
+  <wsdl:message name="IAppointmentService_getFreePeriodsEdit_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getFreePeriodsEditResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAppointmentService_getFreePeriodsEdit_DatabaseExceptionContractFault_FaultMessage">
+    <wsdl:part xmlns:q9="http://schemas.datacontract.org/2004/07/SampleDataContracts" name="detail" element="q9:DatabaseExceptionContract" />
+  </wsdl:message>
+  <wsdl:message name="IAppointmentService_getListPatientAsc_InputMessage">
+    <wsdl:part name="parameters" element="tns:getListPatientAsc" />
+  </wsdl:message>
+  <wsdl:message name="IAppointmentService_getListPatientAsc_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getListPatientAscResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAppointmentService_getListPatientDesc_InputMessage">
+    <wsdl:part name="parameters" element="tns:getListPatientDesc" />
+  </wsdl:message>
+  <wsdl:message name="IAppointmentService_getListPatientDesc_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getListPatientDescResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAppointmentService_getListClinicAsc_InputMessage">
+    <wsdl:part name="parameters" element="tns:getListClinicAsc" />
+  </wsdl:message>
+  <wsdl:message name="IAppointmentService_getListClinicAsc_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getListClinicAscResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAppointmentService_getListClinicDesc_InputMessage">
+    <wsdl:part name="parameters" element="tns:getListClinicDesc" />
+  </wsdl:message>
+  <wsdl:message name="IAppointmentService_getListClinicDesc_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getListClinicDescResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAppointmentService_getListSpecialtyAsc_InputMessage">
+    <wsdl:part name="parameters" element="tns:getListSpecialtyAsc" />
+  </wsdl:message>
+  <wsdl:message name="IAppointmentService_getListSpecialtyAsc_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getListSpecialtyAscResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAppointmentService_getListSpecialtyDesc_InputMessage">
+    <wsdl:part name="parameters" element="tns:getListSpecialtyDesc" />
+  </wsdl:message>
+  <wsdl:message name="IAppointmentService_getListSpecialtyDesc_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getListSpecialtyDescResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAppointmentService_getListDurationAsc_InputMessage">
+    <wsdl:part name="parameters" element="tns:getListDurationAsc" />
+  </wsdl:message>
+  <wsdl:message name="IAppointmentService_getListDurationAsc_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getListDurationAscResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAppointmentService_getListDurationDesc_InputMessage">
+    <wsdl:part name="parameters" element="tns:getListDurationDesc" />
+  </wsdl:message>
+  <wsdl:message name="IAppointmentService_getListDurationDesc_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getListDurationDescResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAppointmentService_getListUrgentAsc_InputMessage">
+    <wsdl:part name="parameters" element="tns:getListUrgentAsc" />
+  </wsdl:message>
+  <wsdl:message name="IAppointmentService_getListUrgentAsc_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getListUrgentAscResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAppointmentService_getListUrgentDesc_InputMessage">
+    <wsdl:part name="parameters" element="tns:getListUrgentDesc" />
+  </wsdl:message>
+  <wsdl:message name="IAppointmentService_getListUrgentDesc_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getListUrgentDescResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAppointmentService_getListTypeAsc_InputMessage">
+    <wsdl:part name="parameters" element="tns:getListTypeAsc" />
+  </wsdl:message>
+  <wsdl:message name="IAppointmentService_getListTypeAsc_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getListTypeAscResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAppointmentService_getListTypeDesc_InputMessage">
+    <wsdl:part name="parameters" element="tns:getListTypeDesc" />
+  </wsdl:message>
+  <wsdl:message name="IAppointmentService_getListTypeDesc_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getListTypeDescResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAppointmentService_getListTimeAsc_InputMessage">
+    <wsdl:part name="parameters" element="tns:getListTimeAsc" />
+  </wsdl:message>
+  <wsdl:message name="IAppointmentService_getListTimeAsc_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getListTimeAscResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAppointmentService_getListTimeDesc_InputMessage">
+    <wsdl:part name="parameters" element="tns:getListTimeDesc" />
+  </wsdl:message>
+  <wsdl:message name="IAppointmentService_getListTimeDesc_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getListTimeDescResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAppointmentService_getListStatusAsc_InputMessage">
+    <wsdl:part name="parameters" element="tns:getListStatusAsc" />
+  </wsdl:message>
+  <wsdl:message name="IAppointmentService_getListStatusAsc_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getListStatusAscResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAppointmentService_getListStatusDesc_InputMessage">
+    <wsdl:part name="parameters" element="tns:getListStatusDesc" />
+  </wsdl:message>
+  <wsdl:message name="IAppointmentService_getListStatusDesc_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getListStatusDescResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAppointmentService_getListPatientNameAsc_InputMessage">
+    <wsdl:part name="parameters" element="tns:getListPatientNameAsc" />
+  </wsdl:message>
+  <wsdl:message name="IAppointmentService_getListPatientNameAsc_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getListPatientNameAscResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAppointmentService_getListPatientNameDesc_InputMessage">
+    <wsdl:part name="parameters" element="tns:getListPatientNameDesc" />
+  </wsdl:message>
+  <wsdl:message name="IAppointmentService_getListPatientNameDesc_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getListPatientNameDescResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAppointmentService_filterByPatientName_InputMessage">
+    <wsdl:part name="parameters" element="tns:filterByPatientName" />
+  </wsdl:message>
+  <wsdl:message name="IAppointmentService_filterByPatientName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:filterByPatientNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAppointmentService_filterByClinicName_InputMessage">
+    <wsdl:part name="parameters" element="tns:filterByClinicName" />
+  </wsdl:message>
+  <wsdl:message name="IAppointmentService_filterByClinicName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:filterByClinicNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAppointmentService_filterByDaterange_InputMessage">
+    <wsdl:part name="parameters" element="tns:filterByDaterange" />
+  </wsdl:message>
+  <wsdl:message name="IAppointmentService_filterByDaterange_OutputMessage">
+    <wsdl:part name="parameters" element="tns:filterByDaterangeResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IAppointmentService">
+    <wsdl:operation name="getAppointmentData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAppointmentService/getAppointmentData" message="tns:IAppointmentService_getAppointmentData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAppointmentService/getAppointmentDataResponse" message="tns:IAppointmentService_getAppointmentData_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAppointmentService/getAppointmentDataDatabaseExceptionContractFault" name="DatabaseExceptionContractFault" message="tns:IAppointmentService_getAppointmentData_DatabaseExceptionContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertAppointment">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAppointmentService/InsertAppointment" message="tns:IAppointmentService_InsertAppointment_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAppointmentService/InsertAppointmentResponse" message="tns:IAppointmentService_InsertAppointment_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAppointmentService/InsertAppointmentDatabaseExceptionContractFault" name="DatabaseExceptionContractFault" message="tns:IAppointmentService_InsertAppointment_DatabaseExceptionContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAppointment">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAppointmentService/UpdateAppointment" message="tns:IAppointmentService_UpdateAppointment_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAppointmentService/UpdateAppointmentResponse" message="tns:IAppointmentService_UpdateAppointment_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAppointmentService/UpdateAppointmentDatabaseExceptionContractFault" name="DatabaseExceptionContractFault" message="tns:IAppointmentService_UpdateAppointment_DatabaseExceptionContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelAppointment">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAppointmentService/CancelAppointment" message="tns:IAppointmentService_CancelAppointment_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAppointmentService/CancelAppointmentResponse" message="tns:IAppointmentService_CancelAppointment_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAppointmentService/CancelAppointmentDatabaseExceptionContractFault" name="DatabaseExceptionContractFault" message="tns:IAppointmentService_CancelAppointment_DatabaseExceptionContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UndoCancelAppointment">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAppointmentService/UndoCancelAppointment" message="tns:IAppointmentService_UndoCancelAppointment_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAppointmentService/UndoCancelAppointmentResponse" message="tns:IAppointmentService_UndoCancelAppointment_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAppointmentService/UndoCancelAppointmentDatabaseExceptionContractFault" name="DatabaseExceptionContractFault" message="tns:IAppointmentService_UndoCancelAppointment_DatabaseExceptionContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getAllList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAppointmentService/getAllList" message="tns:IAppointmentService_getAllList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAppointmentService/getAllListResponse" message="tns:IAppointmentService_getAllList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAppointmentService/getAllListDatabaseExceptionContractFault" name="DatabaseExceptionContractFault" message="tns:IAppointmentService_getAllList_DatabaseExceptionContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getListWithClinicSpecialty">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAppointmentService/getListWithClinicSpecialty" message="tns:IAppointmentService_getListWithClinicSpecialty_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAppointmentService/getListWithClinicSpecialtyResponse" message="tns:IAppointmentService_getListWithClinicSpecialty_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAppointmentService/getListWithClinicSpecialtyDatabaseExceptionContractFault" name="DatabaseExceptionContractFault" message="tns:IAppointmentService_getListWithClinicSpecialty_DatabaseExceptionContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getFreePeriodsNew">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAppointmentService/getFreePeriodsNew" message="tns:IAppointmentService_getFreePeriodsNew_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAppointmentService/getFreePeriodsNewResponse" message="tns:IAppointmentService_getFreePeriodsNew_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAppointmentService/getFreePeriodsNewDatabaseExceptionContractFault" name="DatabaseExceptionContractFault" message="tns:IAppointmentService_getFreePeriodsNew_DatabaseExceptionContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getFreePeriodsEdit">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAppointmentService/getFreePeriodsEdit" message="tns:IAppointmentService_getFreePeriodsEdit_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAppointmentService/getFreePeriodsEditResponse" message="tns:IAppointmentService_getFreePeriodsEdit_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAppointmentService/getFreePeriodsEditDatabaseExceptionContractFault" name="DatabaseExceptionContractFault" message="tns:IAppointmentService_getFreePeriodsEdit_DatabaseExceptionContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getListPatientAsc">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAppointmentService/getListPatientAsc" message="tns:IAppointmentService_getListPatientAsc_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAppointmentService/getListPatientAscResponse" message="tns:IAppointmentService_getListPatientAsc_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getListPatientDesc">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAppointmentService/getListPatientDesc" message="tns:IAppointmentService_getListPatientDesc_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAppointmentService/getListPatientDescResponse" message="tns:IAppointmentService_getListPatientDesc_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getListClinicAsc">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAppointmentService/getListClinicAsc" message="tns:IAppointmentService_getListClinicAsc_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAppointmentService/getListClinicAscResponse" message="tns:IAppointmentService_getListClinicAsc_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getListClinicDesc">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAppointmentService/getListClinicDesc" message="tns:IAppointmentService_getListClinicDesc_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAppointmentService/getListClinicDescResponse" message="tns:IAppointmentService_getListClinicDesc_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getListSpecialtyAsc">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAppointmentService/getListSpecialtyAsc" message="tns:IAppointmentService_getListSpecialtyAsc_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAppointmentService/getListSpecialtyAscResponse" message="tns:IAppointmentService_getListSpecialtyAsc_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getListSpecialtyDesc">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAppointmentService/getListSpecialtyDesc" message="tns:IAppointmentService_getListSpecialtyDesc_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAppointmentService/getListSpecialtyDescResponse" message="tns:IAppointmentService_getListSpecialtyDesc_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getListDurationAsc">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAppointmentService/getListDurationAsc" message="tns:IAppointmentService_getListDurationAsc_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAppointmentService/getListDurationAscResponse" message="tns:IAppointmentService_getListDurationAsc_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getListDurationDesc">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAppointmentService/getListDurationDesc" message="tns:IAppointmentService_getListDurationDesc_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAppointmentService/getListDurationDescResponse" message="tns:IAppointmentService_getListDurationDesc_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getListUrgentAsc">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAppointmentService/getListUrgentAsc" message="tns:IAppointmentService_getListUrgentAsc_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAppointmentService/getListUrgentAscResponse" message="tns:IAppointmentService_getListUrgentAsc_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getListUrgentDesc">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAppointmentService/getListUrgentDesc" message="tns:IAppointmentService_getListUrgentDesc_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAppointmentService/getListUrgentDescResponse" message="tns:IAppointmentService_getListUrgentDesc_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getListTypeAsc">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAppointmentService/getListTypeAsc" message="tns:IAppointmentService_getListTypeAsc_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAppointmentService/getListTypeAscResponse" message="tns:IAppointmentService_getListTypeAsc_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getListTypeDesc">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAppointmentService/getListTypeDesc" message="tns:IAppointmentService_getListTypeDesc_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAppointmentService/getListTypeDescResponse" message="tns:IAppointmentService_getListTypeDesc_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getListTimeAsc">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAppointmentService/getListTimeAsc" message="tns:IAppointmentService_getListTimeAsc_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAppointmentService/getListTimeAscResponse" message="tns:IAppointmentService_getListTimeAsc_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getListTimeDesc">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAppointmentService/getListTimeDesc" message="tns:IAppointmentService_getListTimeDesc_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAppointmentService/getListTimeDescResponse" message="tns:IAppointmentService_getListTimeDesc_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getListStatusAsc">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAppointmentService/getListStatusAsc" message="tns:IAppointmentService_getListStatusAsc_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAppointmentService/getListStatusAscResponse" message="tns:IAppointmentService_getListStatusAsc_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getListStatusDesc">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAppointmentService/getListStatusDesc" message="tns:IAppointmentService_getListStatusDesc_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAppointmentService/getListStatusDescResponse" message="tns:IAppointmentService_getListStatusDesc_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getListPatientNameAsc">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAppointmentService/getListPatientNameAsc" message="tns:IAppointmentService_getListPatientNameAsc_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAppointmentService/getListPatientNameAscResponse" message="tns:IAppointmentService_getListPatientNameAsc_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getListPatientNameDesc">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAppointmentService/getListPatientNameDesc" message="tns:IAppointmentService_getListPatientNameDesc_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAppointmentService/getListPatientNameDescResponse" message="tns:IAppointmentService_getListPatientNameDesc_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="filterByPatientName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAppointmentService/filterByPatientName" message="tns:IAppointmentService_filterByPatientName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAppointmentService/filterByPatientNameResponse" message="tns:IAppointmentService_filterByPatientName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="filterByClinicName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAppointmentService/filterByClinicName" message="tns:IAppointmentService_filterByClinicName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAppointmentService/filterByClinicNameResponse" message="tns:IAppointmentService_filterByClinicName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="filterByDaterange">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAppointmentService/filterByDaterange" message="tns:IAppointmentService_filterByDaterange_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAppointmentService/filterByDaterangeResponse" message="tns:IAppointmentService_filterByDaterange_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IAppointmentService" type="tns:IAppointmentService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getAppointmentData">
+      <soap:operation soapAction="http://tempuri.org/IAppointmentService/getAppointmentData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DatabaseExceptionContractFault">
+        <soap:fault use="literal" name="DatabaseExceptionContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InsertAppointment">
+      <soap:operation soapAction="http://tempuri.org/IAppointmentService/InsertAppointment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DatabaseExceptionContractFault">
+        <soap:fault use="literal" name="DatabaseExceptionContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAppointment">
+      <soap:operation soapAction="http://tempuri.org/IAppointmentService/UpdateAppointment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DatabaseExceptionContractFault">
+        <soap:fault use="literal" name="DatabaseExceptionContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CancelAppointment">
+      <soap:operation soapAction="http://tempuri.org/IAppointmentService/CancelAppointment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DatabaseExceptionContractFault">
+        <soap:fault use="literal" name="DatabaseExceptionContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UndoCancelAppointment">
+      <soap:operation soapAction="http://tempuri.org/IAppointmentService/UndoCancelAppointment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DatabaseExceptionContractFault">
+        <soap:fault use="literal" name="DatabaseExceptionContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getAllList">
+      <soap:operation soapAction="http://tempuri.org/IAppointmentService/getAllList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DatabaseExceptionContractFault">
+        <soap:fault use="literal" name="DatabaseExceptionContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getListWithClinicSpecialty">
+      <soap:operation soapAction="http://tempuri.org/IAppointmentService/getListWithClinicSpecialty" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DatabaseExceptionContractFault">
+        <soap:fault use="literal" name="DatabaseExceptionContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getFreePeriodsNew">
+      <soap:operation soapAction="http://tempuri.org/IAppointmentService/getFreePeriodsNew" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DatabaseExceptionContractFault">
+        <soap:fault use="literal" name="DatabaseExceptionContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getFreePeriodsEdit">
+      <soap:operation soapAction="http://tempuri.org/IAppointmentService/getFreePeriodsEdit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DatabaseExceptionContractFault">
+        <soap:fault use="literal" name="DatabaseExceptionContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getListPatientAsc">
+      <soap:operation soapAction="http://tempuri.org/IAppointmentService/getListPatientAsc" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getListPatientDesc">
+      <soap:operation soapAction="http://tempuri.org/IAppointmentService/getListPatientDesc" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getListClinicAsc">
+      <soap:operation soapAction="http://tempuri.org/IAppointmentService/getListClinicAsc" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getListClinicDesc">
+      <soap:operation soapAction="http://tempuri.org/IAppointmentService/getListClinicDesc" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getListSpecialtyAsc">
+      <soap:operation soapAction="http://tempuri.org/IAppointmentService/getListSpecialtyAsc" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getListSpecialtyDesc">
+      <soap:operation soapAction="http://tempuri.org/IAppointmentService/getListSpecialtyDesc" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getListDurationAsc">
+      <soap:operation soapAction="http://tempuri.org/IAppointmentService/getListDurationAsc" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getListDurationDesc">
+      <soap:operation soapAction="http://tempuri.org/IAppointmentService/getListDurationDesc" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getListUrgentAsc">
+      <soap:operation soapAction="http://tempuri.org/IAppointmentService/getListUrgentAsc" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getListUrgentDesc">
+      <soap:operation soapAction="http://tempuri.org/IAppointmentService/getListUrgentDesc" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getListTypeAsc">
+      <soap:operation soapAction="http://tempuri.org/IAppointmentService/getListTypeAsc" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getListTypeDesc">
+      <soap:operation soapAction="http://tempuri.org/IAppointmentService/getListTypeDesc" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getListTimeAsc">
+      <soap:operation soapAction="http://tempuri.org/IAppointmentService/getListTimeAsc" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getListTimeDesc">
+      <soap:operation soapAction="http://tempuri.org/IAppointmentService/getListTimeDesc" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getListStatusAsc">
+      <soap:operation soapAction="http://tempuri.org/IAppointmentService/getListStatusAsc" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getListStatusDesc">
+      <soap:operation soapAction="http://tempuri.org/IAppointmentService/getListStatusDesc" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getListPatientNameAsc">
+      <soap:operation soapAction="http://tempuri.org/IAppointmentService/getListPatientNameAsc" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getListPatientNameDesc">
+      <soap:operation soapAction="http://tempuri.org/IAppointmentService/getListPatientNameDesc" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="filterByPatientName">
+      <soap:operation soapAction="http://tempuri.org/IAppointmentService/filterByPatientName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="filterByClinicName">
+      <soap:operation soapAction="http://tempuri.org/IAppointmentService/filterByClinicName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="filterByDaterange">
+      <soap:operation soapAction="http://tempuri.org/IAppointmentService/filterByDaterange" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AppointmentService">
+    <wsdl:port name="BasicHttpBinding_IAppointmentService" binding="tns:BasicHttpBinding_IAppointmentService">
+      <soap:address location="http://localhost:52719/AppointmentService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

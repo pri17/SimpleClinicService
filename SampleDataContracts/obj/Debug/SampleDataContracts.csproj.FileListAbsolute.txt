@@ -1,0 +1,6 @@
+C:\environments\sandbox\zjiawen\SampleService\SampleDataContracts\bin\Debug\SampleDataContracts.dll
+C:\environments\sandbox\zjiawen\SampleService\SampleDataContracts\bin\Debug\SampleDataContracts.pdb
+C:\environments\sandbox\zjiawen\SampleService\SampleDataContracts\obj\Debug\SampleDataContracts.dll
+C:\environments\sandbox\zjiawen\SampleService\SampleDataContracts\obj\Debug\SampleDataContracts.pdb
+C:\environments\sandbox\zjiawen\SampleService\SampleDataContracts\bin\Debug\Itenso.TimePeriod.dll
+C:\environments\sandbox\zjiawen\SampleService\SampleDataContracts\obj\Debug\SampleDataContracts.csprojResolveAssemblyReference.cache

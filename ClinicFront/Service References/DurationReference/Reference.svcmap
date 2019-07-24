@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="66a8cb13-076b-47de-a6c5-9c9de1efc520" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:52719/DurationService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="DurationService.wsdl" MetadataType="Wsdl" ID="e0545ecc-1d3c-4b47-af2f-496a3fc22088" SourceId="1" SourceUrl="http://localhost:52719/DurationService.svc?wsdl" />
+    <MetadataFile FileName="DurationService.xsd" MetadataType="Schema" ID="9bf51acc-0856-4b46-bd73-c26c7b04fb7e" SourceId="1" SourceUrl="http://localhost:52719/DurationService.svc?xsd=xsd1" />
+    <MetadataFile FileName="DurationService1.xsd" MetadataType="Schema" ID="2021bf4d-544c-4995-9b2a-bffb911408d6" SourceId="1" SourceUrl="http://localhost:52719/DurationService.svc?xsd=xsd0" />
+    <MetadataFile FileName="DurationService2.xsd" MetadataType="Schema" ID="7dfb0b51-7116-491b-b638-92d1cf938f56" SourceId="1" SourceUrl="http://localhost:52719/DurationService.svc?xsd=xsd2" />
+    <MetadataFile FileName="DurationService.disco" MetadataType="Disco" ID="068071a6-e229-4c68-8435-a21408be49f5" SourceId="1" SourceUrl="http://localhost:52719/DurationService.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

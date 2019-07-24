@@ -1,0 +1,9 @@
+appId : 30
+patientId : 1
+clinicId : ELM
+specialtyId : 103
+duration : 15
+urgent : r
+start : 17/06/2019 10:05:00
+end : 17/06/2019 10:20:00
+type : n

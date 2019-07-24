@@ -1,0 +1,6 @@
+C:\environments\sandbox\zjiawen\SampleService\SampleDomain\bin\Debug\SampleDomain.dll
+C:\environments\sandbox\zjiawen\SampleService\SampleDomain\bin\Debug\SampleDomain.pdb
+C:\environments\sandbox\zjiawen\SampleService\SampleDomain\obj\Debug\SampleDomain.dll
+C:\environments\sandbox\zjiawen\SampleService\SampleDomain\obj\Debug\SampleDomain.pdb
+C:\environments\sandbox\zjiawen\SampleService\SampleDomain\bin\Debug\Itenso.TimePeriod.dll
+C:\environments\sandbox\zjiawen\SampleService\SampleDomain\obj\Debug\SampleDomain.csprojResolveAssemblyReference.cache
