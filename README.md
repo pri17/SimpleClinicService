@@ -4,7 +4,7 @@ Use C# language, aspx webforms(applied some jQuery functions as well), fluent NH
 
 Complete this exercise using individual sulotions.
 
-## Checking if existing timeslot conficts
+## Checking if existing timeslots confict with each other
 ```c#
 private Boolean checkAvailablity(String clinicId, String specialtyId, DateTime start, DateTime end)
 {
