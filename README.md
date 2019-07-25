@@ -3,10 +3,76 @@ Servelec new starter exercise
 Use C# language, aspx webforms(applied some jQuery functions as well), fluent NHibernate.
 
 Complete this exercise using individual sulotions.
-e.g.
-## TimePeriodLibrary.Net.2.1.1 Package
-When calculating the available timeslots, instead of implementing complicatedly, found the **TimePeriodLibrary.Net.2.1.1** [package](https://www.codeproject.com/Articles/168662/Time-Period-Library-for-NET), applying some classes -- *TimePeriodCombiner*, *TimePeriodCollection*, *TimeGapCalculator* etc., and some methods -- *ComePeriods()*, *GetGaps()* etc.
 
+## Checking if existing timeslot conficts
+```c#
+private Boolean checkAvailablity(String clinicId, String specialtyId, DateTime start, DateTime end)
+{
+
+
+    var repository = new AppointmentRepository(this.unitOfWork);
+    //1. reach the appointment list with the clinic id and specialty_id which are not cancelled;
+    List<Appointment> list = repository.getListWithCSD(clinicId, specialtyId, start);
+
+    foreach (var ll in list)
+    {
+        DateTime llStart = ll.start_time;
+        DateTime llEnd = ll.end_time;
+        if (start.CompareTo(llStart) >= 0 && start.CompareTo(llEnd) < 0 
+            || end.CompareTo(llStart)> 0 && end.CompareTo(llEnd) <= 0)
+        {
+            return false;
+        }
+    }
+    return true;
+}
+```
+
+## TimePeriodLibrary.Net.2.1.1 Package
+When calculating the available timeslots, instead of implementing complicatedly, found the **TimePeriodLibrary.Net.2.1.1** [package](https://www.codeproject.com/Articles/168662/Time-Period-Library-for-NET).
+
+There are three classes  can use,  
+***"TimePriodCollection"*** -- collection of time periods;  
+***"TimePeriodCombiner"***  -- consolidate time periods, with a view on overlapping or adjacent time periods;  
+![timescombiner](https://github.com/pri17/SimpleClinicService/blob/master/timecombiner.png)  
+
+***"TimeGapCalculator"***  -- calculates the gaps between time periods in a time period collection.  
+![gapcalculator](https://github.com/pri17/SimpleClinicService/blob/master/gapcalculator.png)  
+So after get the boooked appointment lists(not cancelled), first store the time period into a time period collection,  
+```c#
+TimePeriodCollection periods = new TimePeriodCollection();
+ foreach (var app in appointmentList)
+ {
+      periods.Add(new TimeRange(app.start_time, app.end_time));
+ }
+```
+Combine the periods  
+```c#
+ TimePeriodCombiner<TimeRange> periodCombiner = new TimePeriodCombiner<TimeRange>();
+ ITimePeriodCollection combinedPeriods = periodCombiner.CombinePeriods(periods);
+
+ foreach (ITimePeriod combinedPeriod in combinedPeriods)
+ {
+    //Console.WriteLine("Combined Period: " + combinedPeriod);
+  	System.Diagnostics.Debug.WriteLine("Combined Period: " + combinedPeriod);
+}
+```
+Then calculate the gaps among the periods, also with the gap between the start time and end time of the day ( 'dd' is the selected date the user wants to book an appointment on ).  
+```c#
+TimeGapCalculator<TimeRange> gapCalculator =  new TimeGapCalculator<TimeRange>(new TimeCalendar());
+
+ITimePeriod searchLimits = new CalendarTimeRange(
+                          new DateTime(dd.Year, dd.Month, dd.Day, 9, 0, 0),
+    					new DateTime(dd.Year, dd.Month, dd.Day, 16, 0, 0));
+ITimePeriodCollection freeTimes = gapCalculator.GetGaps(combinedPeriods, searchLimits);
+foreach (ITimePeriod free in freeTimes)
+ {
+     //Console.WriteLine("Combined Period: " + combinedPeriod);
+      System.Diagnostics.Debug.WriteLine("Free Period: " + free);
+}
+```
+
+Full code: 
 ```c#
 public ITimePeriodCollection getAvailableTimeslots(TimePeriodCollection periods, DateTime dd, String durationId)
 {
@@ -75,26 +141,3 @@ private ITimePeriodCollection splitTimeRange(ITimePeriodCollection freetimes, st
 }
 ```
 
-## Checking if existing timeslot conficts
-```c#
-private Boolean checkAvailablity(String clinicId, String specialtyId, DateTime start, DateTime end)
-{
-
-
-    var repository = new AppointmentRepository(this.unitOfWork);
-    //1. reach the appointment list with the clinic id and specialty_id which are not cancelled;
-    List<Appointment> list = repository.getListWithCSD(clinicId, specialtyId, start);
-
-    foreach (var ll in list)
-    {
-        DateTime llStart = ll.start_time;
-        DateTime llEnd = ll.end_time;
-        if (start.CompareTo(llStart) >= 0 && start.CompareTo(llEnd) < 0 
-            || end.CompareTo(llStart)> 0 && end.CompareTo(llEnd) <= 0)
-        {
-            return false;
-        }
-    }
-    return true;
-}
-```
