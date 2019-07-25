@@ -4,3 +4,9 @@ C:\environments\sandbox\zjiawen\SampleService\SampleDataContracts\obj\Debug\Samp
 C:\environments\sandbox\zjiawen\SampleService\SampleDataContracts\obj\Debug\SampleDataContracts.pdb
 C:\environments\sandbox\zjiawen\SampleService\SampleDataContracts\bin\Debug\Itenso.TimePeriod.dll
 C:\environments\sandbox\zjiawen\SampleService\SampleDataContracts\obj\Debug\SampleDataContracts.csprojResolveAssemblyReference.cache
+C:\Users\zhou.jiawen\Documents\pri17github\SimpleClinicService\SampleDataContracts\bin\Debug\SampleDataContracts.dll
+C:\Users\zhou.jiawen\Documents\pri17github\SimpleClinicService\SampleDataContracts\bin\Debug\SampleDataContracts.pdb
+C:\Users\zhou.jiawen\Documents\pri17github\SimpleClinicService\SampleDataContracts\bin\Debug\Itenso.TimePeriod.dll
+C:\Users\zhou.jiawen\Documents\pri17github\SimpleClinicService\SampleDataContracts\obj\Debug\SampleDataContracts.csprojResolveAssemblyReference.cache
+C:\Users\zhou.jiawen\Documents\pri17github\SimpleClinicService\SampleDataContracts\obj\Debug\SampleDataContracts.dll
+C:\Users\zhou.jiawen\Documents\pri17github\SimpleClinicService\SampleDataContracts\obj\Debug\SampleDataContracts.pdb

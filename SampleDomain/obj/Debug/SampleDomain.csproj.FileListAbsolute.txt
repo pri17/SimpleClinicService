@@ -4,3 +4,9 @@ C:\environments\sandbox\zjiawen\SampleService\SampleDomain\obj\Debug\SampleDomai
 C:\environments\sandbox\zjiawen\SampleService\SampleDomain\obj\Debug\SampleDomain.pdb
 C:\environments\sandbox\zjiawen\SampleService\SampleDomain\bin\Debug\Itenso.TimePeriod.dll
 C:\environments\sandbox\zjiawen\SampleService\SampleDomain\obj\Debug\SampleDomain.csprojResolveAssemblyReference.cache
+C:\Users\zhou.jiawen\Documents\pri17github\SimpleClinicService\SampleDomain\bin\Debug\SampleDomain.dll
+C:\Users\zhou.jiawen\Documents\pri17github\SimpleClinicService\SampleDomain\bin\Debug\SampleDomain.pdb
+C:\Users\zhou.jiawen\Documents\pri17github\SimpleClinicService\SampleDomain\bin\Debug\Itenso.TimePeriod.dll
+C:\Users\zhou.jiawen\Documents\pri17github\SimpleClinicService\SampleDomain\obj\Debug\SampleDomain.csprojResolveAssemblyReference.cache
+C:\Users\zhou.jiawen\Documents\pri17github\SimpleClinicService\SampleDomain\obj\Debug\SampleDomain.dll
+C:\Users\zhou.jiawen\Documents\pri17github\SimpleClinicService\SampleDomain\obj\Debug\SampleDomain.pdb
