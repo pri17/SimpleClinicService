@@ -1,5 +1,5 @@
-# SimpleClinicService
-Servelec new starter exercise
+# Simple Clinic Booking System
+Servelec healthcare new starter exercise
 Use C# language, aspx webforms(applied some jQuery functions as well), fluent NHibernate.
 
 Complete this exercise using individual sulotions.
