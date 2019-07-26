@@ -47,16 +47,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AppointmentBusiness.cs" />
-    <Compile Include="ClinicBusiness.cs" />
-    <Compile Include="DurationBusiness.cs" />
-    <Compile Include="PatinetBusiness.cs" />
-    <Compile Include="SampleBusiness.cs" />
+    <Compile Include="MessageBusiness.cs" />
     <Compile Include="ISampleBusiness.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SpecialtyBusiness.cs" />
-    <Compile Include="TypeBusiness.cs" />
-    <Compile Include="UrgentBusiness.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Core\Core.csproj">

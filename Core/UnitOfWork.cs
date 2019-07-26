@@ -18,7 +18,7 @@
         #region Constants:
 
         private const string ConnectionString =
-            @"Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=StudentExerciseGwen;Data Source=hs-sql2016-01\oceano";
+            @"Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=DEVTESTMHS;Data Source=oceanomain";
 
         #endregion
 

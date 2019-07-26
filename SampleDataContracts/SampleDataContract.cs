@@ -25,157 +25,46 @@ namespace SampleDataContracts
     }
 
     [DataContract]
-    public class AppointmentDataContract
+    public class MessageContract
     {
         [DataMember]
-        public int appointmentId { get; set; }
+        public int sequenceId { get; set; }
 
         [DataMember]
-        public int patientID { get; set; }
+        public int attempts { get; set; }
 
         [DataMember]
-        public String name { get; set; }
+        public  string state { get; set; }
 
         [DataMember]
-        public long phone { get; set; }
+        public  int actionAt { get; set; }
 
         [DataMember]
-        public String email { get; set; }
+        public  string version { get; set; }
 
         [DataMember]
-        public String clinicDesp { get; set; }
+        public  string messageType { get; set; } // messagetype, attempts
 
         [DataMember]
-        public String clinicId { get; set; }
+        public  string messageID { get; set; }
 
         [DataMember]
-        public String specialtyDesp { get; set; }
+        public  string referenceID { get; set; }
 
         [DataMember]
-        public String specialtyId { get; set; }
+        public string conversationID { get; set; }
 
         [DataMember]
-        public String durationDesp { get; set; }
+        public  string source { get; set; }
 
         [DataMember]
-        public String durationCode { get; set; }
+        public  string destination { get; set; }
 
         [DataMember]
-        public String urgentDesp { get; set; }
+        public  DateTime createdAt { get; set; }
 
         [DataMember]
-        public String urgentCode { get; set; }
-
-        [DataMember]
-        public DateTime start_time { get; set; }
-
-        [DataMember]
-        public DateTime end_time { get; set; }
-
-        [DataMember]
-        public String appointType { get; set; }
-
-        [DataMember]
-        public String appointTypeCode { get; set; }
-
-        [DataMember]
-        public String isCancel { get; set; }
+        public  string transportMessageId { get; set; }
     }
 
-    [DataContract]
-    public class PatientContract
-    {
-        [DataMember]
-        public int id { get; set; }
-
-        [DataMember]
-        public string first_name { get; set; }
-
-        [DataMember]
-        public string last_name { get; set; }
-
-        [DataMember]
-        public long phone { get; set; }
-
-        [DataMember]
-        public string email { get; set; }
-
-        [DataMember]
-        public string full_name { get; set; }
-    }
-
-
-    [DataContract]
-    public class ClinicContract
-    {
-        [DataMember]
-        public string code { get; set; }
-
-        [DataMember]
-        public string desp { get; set; }
-    }
-
-    [DataContract]
-    public class SpecialtyContract
-    {
-        [DataMember]
-        public string code { get; set; }
-
-        [DataMember]
-        public string desp { get; set; }
-    }
-
-    [DataContract]
-    public class DurationContract
-    {
-        [DataMember]
-        public string code { get; set; }
-
-        [DataMember]
-        public string desp { get; set; }
-    }
-
-    [DataContract]
-    public class TypeContract
-    {
-        [DataMember]
-        public string type { get; set; }
-
-        [DataMember]
-        public string desp { get; set; }
-    }
-
-    [DataContract]
-    public class UrgentContract
-    {
-        [DataMember]
-        public string code { get; set; }
-
-        [DataMember]
-        public string desp { get; set; }
-    }
-
-    [DataContract]
-    public class TimeSlotContract
-    {
-        [DataMember]
-        public DateTime start { get; set; }
-
-        [DataMember]
-        public DateTime end { get; set; }
-
-        [DataMember]
-        public String time { get; set; }
-
-    }
-
-    [DataContract]
-    public class DatabaseExceptionContract
-    {
-        [DataMember]
-        public bool Result { get; set; }
-
-        [DataMember]
-        public string Message { get; set; }
-    }
 }

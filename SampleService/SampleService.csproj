@@ -64,48 +64,17 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="AppointmentService.svc" />
-    <Content Include="ClinicService.svc" />
-    <Content Include="DurationService.svc" />
-    <Content Include="PatientService.svc" />
-    <Content Include="SpecialtyService.svc" />
-    <Content Include="TypeService.svc" />
-    <Content Include="UrgentService.svc" />
+    <Content Include="MessageService.svc" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AppointmentService.svc.cs">
-      <DependentUpon>AppointmentService.svc</DependentUpon>
-    </Compile>
-    <Compile Include="ClinicService.svc.cs">
-      <DependentUpon>ClinicService.svc</DependentUpon>
-    </Compile>
-    <Compile Include="DurationService.svc.cs">
-      <DependentUpon>DurationService.svc</DependentUpon>
-    </Compile>
-    <Compile Include="IAppointmentService.cs" />
-    <Compile Include="IClinicService.cs" />
-    <Compile Include="IDurationService.cs" />
-    <Compile Include="IPatientService.cs" />
-    <Compile Include="ISampleService.cs" />
-    <Compile Include="ISpecialtyService.cs" />
-    <Compile Include="ITypeService.cs" />
-    <Compile Include="IUrgentService.cs" />
-    <Compile Include="PatientService.svc.cs">
-      <DependentUpon>PatientService.svc</DependentUpon>
+    <Compile Include="IMessageService.cs" />
+    <Compile Include="MessageService.svc.cs">
+      <DependentUpon>MessageService.svc</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SpecialtyService.svc.cs">
-      <DependentUpon>SpecialtyService.svc</DependentUpon>
-    </Compile>
-    <Compile Include="TypeService.svc.cs">
-      <DependentUpon>TypeService.svc</DependentUpon>
-    </Compile>
-    <Compile Include="UrgentService.svc.cs">
-      <DependentUpon>UrgentService.svc</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
