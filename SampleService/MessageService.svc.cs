@@ -8,6 +8,10 @@ using Core;
 using SampleBusiness;
 using SampleDataContracts;
 using SampleDomain;
+using Kendo.Mvc.UI;
+using Kendo.Mvc.Extensions;
+using Microsoft.AspNetCore.Mvc;
+using System.Collections;
 
 namespace SampleService
 {
@@ -15,64 +19,68 @@ namespace SampleService
     // NOTE: In order to launch WCF Test Client for testing this service, please select MessageService.svc or MessageService.svc.cs at the Solution Explorer and start debugging.
     public class MessageService : IMessageService
     {
-       private readonly Logger logger;
+        private readonly Logger logger;
 
-       public MessageService()
+        public MessageService()
         {
             this.logger = new Logger();
         }
 
-       public List<MessageContract> getallLists()
-       {
-           List<MHSMessage> p = new List<MHSMessage>();
+        public List<MessageContract> getallLists()
+        {
+            List<MHSMessage> p = new List<MHSMessage>();
 
-           using (var unitOfWork = new UnitOfWork())
-           {
-               p = new MessageBusiness(unitOfWork).Getlist();
-               unitOfWork.Close();
-           }
-           List<MessageContract> tl = new List<MessageContract>();
-           foreach (var xx in p)
-           {
-               var tem = mapToDC(xx);
-               tl.Add(tem);
-           }
-           return tl;
-       }
+            using (var unitOfWork = new UnitOfWork())
+            {
+                p = new MessageBusiness(unitOfWork).Getlist();
+                unitOfWork.Close();
+            }
+            List<MessageContract> tl = new List<MessageContract>();
+            foreach (var xx in p)
+            {
+                var tem = mapToDC(xx);
+                tl.Add(tem);
+            }
+            return tl;
+        }
 
-       public MessageContract getById(string id)
-       {
-           MHSMessage p ;
+        public JsonResult getById([DataSourceRequest]DataSourceRequest request)
+        {
+            List<MHSMessage> p = new List<MHSMessage>();
 
-           using (var unitOfWork = new UnitOfWork())
-           {
-               p = new MessageBusiness(unitOfWork).GetById(id);
-               unitOfWork.Close();
-           }
-           
-           var tem = mapToDC(p);
-          
-           return tem;
-       }
+            using (var unitOfWork = new UnitOfWork())
+            {
+                p = new MessageBusiness(unitOfWork).GetById("1111");
+                unitOfWork.Close();
+            }
 
-       private MessageContract mapToDC(MHSMessage p)
-       {
-           return new MessageContract
-           {
-               sequenceId = p.SequenceID,
-               attempts = p.Attempts,
-               actionAt = p.ActionAt,
-               conversationID = p.ConversationID,
-               createdAt = p.CreatedAt,
-               destination = p.Destination,
-               messageID = p.MessageID,
-               messageType =p.MessageType,
-               referenceID = p.ReferenceID,
-               source = p.Source,
-                state =p.State,
-                transportMessageId =p.TransportMessageId,
-                version= p.Version
-           };
-       }
+            List<MessageContract> tl = new List<MessageContract>();
+            foreach (var xx in p)
+            {
+                var tem = mapToDC(xx);
+                tl.Add(tem);
+            }
+            return Json(this.tl.ToDataSourceResult(request));
+        }
+
+        private MessageContract mapToDC(MHSMessage p)
+        {
+            return new MessageContract
+            {
+                sequenceId = p.SequenceID,
+                attempts = p.Attempts,
+                actionAt = p.ActionAt,
+                conversationID = p.ConversationID,
+                createdAt = p.CreatedAt.ToShortDateString(),
+                destination = p.Destination,
+                messageID = p.MessageID,
+                messageType = p.MessageType,
+                referenceID = p.ReferenceID,
+                source = p.Source,
+                state = p.State,
+                transportMessageId = p.TransportMessageId,
+                version = p.Version
+            };
+        }
     }
 }

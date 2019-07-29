@@ -25,7 +25,7 @@ namespace SampleBusiness
             return new MessageRepository(this.unitOfWork).getall();
         }
 
-        public MHSMessage GetById(string id)
+        public List<MHSMessage> GetById(string id)
         {
             return new MessageRepository(this.unitOfWork).getById(id);
         }

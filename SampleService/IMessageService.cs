@@ -20,6 +20,6 @@ namespace SampleService
 
         [OperationContract]
         [WebGet(BodyStyle = WebMessageBodyStyle.Bare, ResponseFormat = WebMessageFormat.Json)]
-        MessageContract getById(string id);
+        JsonResult getById([DataSourceRequest]DataSourceRequest request);
     }
 }

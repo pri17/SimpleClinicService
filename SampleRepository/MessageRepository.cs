@@ -28,11 +28,12 @@ namespace SampleRepository
                 .ToList();
         }
 
-        public MHSMessage getById(string id)
+        public List<MHSMessage> getById(string id)
         {
             return this.unitOfWork.Session.Query<MHSMessage>()
-                .Where(x => x.SequenceID == Int32.Parse(id))
-                .FirstOrDefault();
+                .Where(x => x.Source == "EBS_ASID")
+                .Where(x => x.Destination == "DEVTEST")
+                .ToList();
         }
 
  

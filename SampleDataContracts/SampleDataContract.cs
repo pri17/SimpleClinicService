@@ -61,7 +61,7 @@ namespace SampleDataContracts
         public  string destination { get; set; }
 
         [DataMember]
-        public  DateTime createdAt { get; set; }
+        public  string createdAt { get; set; }
 
         [DataMember]
         public  string transportMessageId { get; set; }
