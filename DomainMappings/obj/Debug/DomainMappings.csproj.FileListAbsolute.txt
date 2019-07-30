@@ -38,3 +38,6 @@ C:\Users\zhou.jiawen\Documents\pri17github\SimpleClinicService\DomainMappings\bi
 C:\Users\zhou.jiawen\Documents\pri17github\SimpleClinicService\DomainMappings\obj\Debug\DomainMappings.csprojResolveAssemblyReference.cache
 C:\Users\zhou.jiawen\Documents\pri17github\SimpleClinicService\DomainMappings\obj\Debug\DomainMappings.dll
 C:\Users\zhou.jiawen\Documents\pri17github\SimpleClinicService\DomainMappings\obj\Debug\DomainMappings.pdb
+C:\Users\zhou.jiawen\Documents\pri17github\SimpleClinicService\DomainMappings\bin\Debug\DomainMappings.dll.config
+C:\Users\zhou.jiawen\Documents\pri17github\SimpleClinicService\DomainMappings\bin\Debug\Kendo.DynamicLinq.dll
+C:\Users\zhou.jiawen\Documents\pri17github\SimpleClinicService\DomainMappings\bin\Debug\System.Linq.Dynamic.dll

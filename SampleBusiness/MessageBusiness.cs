@@ -12,22 +12,27 @@ namespace SampleBusiness
 {
     public class MessageBusiness
     {
-         private readonly IUnitOfWork unitOfWork;
-         private UnitOfWork unitOfWork1;
+        private readonly IUnitOfWork unitOfWork;
+        private UnitOfWork unitOfWork1;
 
-         public MessageBusiness(IUnitOfWork unitOfWork)
+        public MessageBusiness(IUnitOfWork unitOfWork)
         {
             this.unitOfWork = unitOfWork;
         }
 
-        public List<MHSMessage> Getlist()
+        public int getCount()
         {
-            return new MessageRepository(this.unitOfWork).getall();
+            return new MessageRepository(this.unitOfWork).getCount();
         }
 
-        public List<MHSMessage> GetById(string id)
+        public List<MHSMessage> Getlist(int page, int pageSize)
         {
-            return new MessageRepository(this.unitOfWork).getById(id);
+            return new MessageRepository(this.unitOfWork).getall(page, pageSize);
+        }
+
+        public List<MHSMessage> GetById(int page, int pageSize)
+        {
+            return new MessageRepository(this.unitOfWork).getById(page, pageSize);
         }
 
     }

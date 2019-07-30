@@ -17,22 +17,27 @@ namespace SampleRepository
             this.unitOfWork = unitOfWork;
         }
 
-        /// <summary>
-        /// Get one Appointment record
-        /// </summary>
-        /// <param name="id">appointment id</param>
-        /// <returns></returns>
-        public List<MHSMessage> getall()
+        public int getCount()
         {
             return this.unitOfWork.Session.Query<MHSMessage>()
+                .Count();
+        }
+
+        public List<MHSMessage> getall(int page, int pageSize)
+        {
+            return this.unitOfWork.Session.Query<MHSMessage>()
+                .Skip(page * pageSize)
+                .Take(pageSize)
                 .ToList();
         }
 
-        public List<MHSMessage> getById(string id)
+        public List<MHSMessage> getById(int page, int pageSize)
         {
             return this.unitOfWork.Session.Query<MHSMessage>()
                 .Where(x => x.Source == "EBS_ASID")
                 .Where(x => x.Destination == "DEVTEST")
+                .Skip(page*pageSize)
+                .Take(pageSize)
                 .ToList();
         }
 

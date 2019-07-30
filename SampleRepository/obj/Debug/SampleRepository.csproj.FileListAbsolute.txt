@@ -46,3 +46,6 @@ C:\Users\zhou.jiawen\Documents\pri17github\SimpleClinicService\SampleRepository\
 C:\Users\zhou.jiawen\Documents\pri17github\SimpleClinicService\SampleRepository\obj\Debug\SampleRepository.csprojResolveAssemblyReference.cache
 C:\Users\zhou.jiawen\Documents\pri17github\SimpleClinicService\SampleRepository\obj\Debug\SampleRepository.dll
 C:\Users\zhou.jiawen\Documents\pri17github\SimpleClinicService\SampleRepository\obj\Debug\SampleRepository.pdb
+C:\Users\zhou.jiawen\Documents\pri17github\SimpleClinicService\SampleRepository\bin\Debug\SampleRepository.dll.config
+C:\Users\zhou.jiawen\Documents\pri17github\SimpleClinicService\SampleRepository\bin\Debug\Kendo.DynamicLinq.dll
+C:\Users\zhou.jiawen\Documents\pri17github\SimpleClinicService\SampleRepository\bin\Debug\System.Linq.Dynamic.dll

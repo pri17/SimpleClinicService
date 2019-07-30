@@ -10,3 +10,6 @@ C:\Users\zhou.jiawen\Documents\pri17github\SimpleClinicService\SampleDomain\bin\
 C:\Users\zhou.jiawen\Documents\pri17github\SimpleClinicService\SampleDomain\obj\Debug\SampleDomain.csprojResolveAssemblyReference.cache
 C:\Users\zhou.jiawen\Documents\pri17github\SimpleClinicService\SampleDomain\obj\Debug\SampleDomain.dll
 C:\Users\zhou.jiawen\Documents\pri17github\SimpleClinicService\SampleDomain\obj\Debug\SampleDomain.pdb
+C:\Users\zhou.jiawen\Documents\pri17github\SimpleClinicService\SampleDomain\bin\Debug\SampleDomain.dll.config
+C:\Users\zhou.jiawen\Documents\pri17github\SimpleClinicService\SampleDomain\bin\Debug\Kendo.DynamicLinq.dll
+C:\Users\zhou.jiawen\Documents\pri17github\SimpleClinicService\SampleDomain\bin\Debug\System.Linq.Dynamic.dll

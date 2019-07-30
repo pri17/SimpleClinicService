@@ -10,3 +10,6 @@ C:\Users\zhou.jiawen\Documents\pri17github\SimpleClinicService\SampleDataContrac
 C:\Users\zhou.jiawen\Documents\pri17github\SimpleClinicService\SampleDataContracts\obj\Debug\SampleDataContracts.csprojResolveAssemblyReference.cache
 C:\Users\zhou.jiawen\Documents\pri17github\SimpleClinicService\SampleDataContracts\obj\Debug\SampleDataContracts.dll
 C:\Users\zhou.jiawen\Documents\pri17github\SimpleClinicService\SampleDataContracts\obj\Debug\SampleDataContracts.pdb
+C:\Users\zhou.jiawen\Documents\pri17github\SimpleClinicService\SampleDataContracts\bin\Debug\SampleDataContracts.dll.config
+C:\Users\zhou.jiawen\Documents\pri17github\SimpleClinicService\SampleDataContracts\bin\Debug\Kendo.DynamicLinq.dll
+C:\Users\zhou.jiawen\Documents\pri17github\SimpleClinicService\SampleDataContracts\bin\Debug\System.Linq.Dynamic.dll

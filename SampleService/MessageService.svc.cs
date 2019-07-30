@@ -8,9 +8,6 @@ using Core;
 using SampleBusiness;
 using SampleDataContracts;
 using SampleDomain;
-using Kendo.Mvc.UI;
-using Kendo.Mvc.Extensions;
-using Microsoft.AspNetCore.Mvc;
 using System.Collections;
 
 namespace SampleService
@@ -26,13 +23,24 @@ namespace SampleService
             this.logger = new Logger();
         }
 
-        public List<MessageContract> getallLists()
+        public int getCount()
+        {
+            int result;
+            using (var unitOfWork = new UnitOfWork())
+            {
+                result = new MessageBusiness(unitOfWork).getCount();
+                unitOfWork.Close();
+            }
+            return result;
+        }
+
+        public List<MessageContract> getallLists(int page, int pageSize)
         {
             List<MHSMessage> p = new List<MHSMessage>();
 
             using (var unitOfWork = new UnitOfWork())
             {
-                p = new MessageBusiness(unitOfWork).Getlist();
+                p = new MessageBusiness(unitOfWork).Getlist(page, pageSize);
                 unitOfWork.Close();
             }
             List<MessageContract> tl = new List<MessageContract>();
@@ -44,13 +52,13 @@ namespace SampleService
             return tl;
         }
 
-        public JsonResult getById([DataSourceRequest]DataSourceRequest request)
+        public List<MessageContract> getById(int page, int pageSize)
         {
             List<MHSMessage> p = new List<MHSMessage>();
 
             using (var unitOfWork = new UnitOfWork())
             {
-                p = new MessageBusiness(unitOfWork).GetById("1111");
+                p = new MessageBusiness(unitOfWork).GetById(page, pageSize);
                 unitOfWork.Close();
             }
 
@@ -60,7 +68,7 @@ namespace SampleService
                 var tem = mapToDC(xx);
                 tl.Add(tem);
             }
-            return Json(this.tl.ToDataSourceResult(request));
+            return tl;
         }
 
         private MessageContract mapToDC(MHSMessage p)

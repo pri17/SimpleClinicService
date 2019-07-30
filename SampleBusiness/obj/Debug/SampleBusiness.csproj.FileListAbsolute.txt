@@ -51,3 +51,5 @@ C:\Users\zhou.jiawen\Documents\pri17github\SimpleClinicService\SampleBusiness\bi
 C:\Users\zhou.jiawen\Documents\pri17github\SimpleClinicService\SampleBusiness\obj\Debug\SampleBusiness.csprojResolveAssemblyReference.cache
 C:\Users\zhou.jiawen\Documents\pri17github\SimpleClinicService\SampleBusiness\obj\Debug\SampleBusiness.dll
 C:\Users\zhou.jiawen\Documents\pri17github\SimpleClinicService\SampleBusiness\obj\Debug\SampleBusiness.pdb
+C:\Users\zhou.jiawen\Documents\pri17github\SimpleClinicService\SampleBusiness\bin\Debug\Kendo.DynamicLinq.dll
+C:\Users\zhou.jiawen\Documents\pri17github\SimpleClinicService\SampleBusiness\bin\Debug\System.Linq.Dynamic.dll

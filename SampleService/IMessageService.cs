@@ -14,12 +14,17 @@ namespace SampleService
     [ServiceContract]
     public interface IMessageService
     {
-        [OperationContract]
-        [WebGet(BodyStyle = WebMessageBodyStyle.Bare, ResponseFormat = WebMessageFormat.Json)]
-        List<MessageContract> getallLists();
 
         [OperationContract]
-        [WebGet(BodyStyle = WebMessageBodyStyle.Bare, ResponseFormat = WebMessageFormat.Json)]
-        JsonResult getById([DataSourceRequest]DataSourceRequest request);
+        [WebInvoke(Method = "GET", UriTemplate = "getCount", BodyStyle = WebMessageBodyStyle.Bare, ResponseFormat = WebMessageFormat.Json)]
+        int getCount();
+
+        [OperationContract]
+        [WebInvoke(Method = "POST", UriTemplate = "getallLists?page={page}&pageSize={pageSize}", BodyStyle = WebMessageBodyStyle.Bare, ResponseFormat = WebMessageFormat.Json)]
+        List<MessageContract> getallLists(int page, int pageSize);
+
+        [OperationContract]
+        [WebInvoke(Method = "POST", UriTemplate = "getById?page={page}&pageSize={pageSize}", BodyStyle = WebMessageBodyStyle.Bare, ResponseFormat = WebMessageFormat.Json)]
+        List<MessageContract> getById(int page, int pageSize);
     }
 }
