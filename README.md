@@ -105,6 +105,7 @@ public ITimePeriodCollection getAvailableTimeslots(TimePeriodCollection periods,
 
 }
 
+//Accoring to duration the user choose, split the free time slots into the available appointment periods.
 private ITimePeriodCollection splitTimeRange(ITimePeriodCollection freetimes, string duration)
 {
     ITimePeriodCollection freeTimeslots = new TimePeriodCollection();
